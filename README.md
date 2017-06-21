@@ -265,6 +265,29 @@ returnSomeFunction();
 function returnSomeString(){return 'Sample';}
 returnSomeFunction()();
 "Sample"
+function score(informationScore,englishScore) {
+	return Object.freeze({
+		information: informationScore,
+		english: englishScore
+    });
+}
+undefined
+var SampleScore = score(50,60);
+undefined
+var SampleScore;
+undefined
+var SampleScore = score(50,60);
+undefined
+sampleScore.information;
+VM2606:1 Uncaught ReferenceError: sampleScore is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM2606:1
+SampleScore.information;
+50
+SampleScore.information = 80;
+80
+SampleScore.information;
+50
 ```
 
 ### Console以外の動き（もしあれば）
